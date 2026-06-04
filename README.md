@@ -53,13 +53,7 @@ IRON/
 
 ---
 
-## نصب سریع بعد از آپلود روی GitHub
-
-وقتی این پروژه را روی این آدرس push کردی:
-
-```text
-https://github.com/Unknown-sir/IRON
-```
+## نصب سریع
 
 روی سرور ایران/سرور عمومی یا همان **Hub**:
 
@@ -287,43 +281,6 @@ curl http://HUB_IP:8080/
 
 ---
 
-## آپلود روی GitHub خودت
-
-از روی سیستم خودت:
-
-```bash
-unzip IRON.zip
-cd IRON
-git init
-git add .
-git commit -m "Initial IRON secure reverse tunnel"
-git branch -M main
-git remote add origin https://github.com/Unknown-sir/IRON.git
-git push -u origin main
-```
-
-اگر ریپو را هنوز نساختی:
-
-1. برو به GitHub
-2. New repository بزن
-3. اسم ریپو را بگذار `IRON`
-4. مالک/Owner باید `Unknown-sir` باشد
-5. ریپو را خالی بساز؛ README یا .gitignore اضافه نکن چون داخل این بسته هست
-6. بعد دستورهای بالا را بزن
-
----
-
-## نکات امنیتی مهم
-
-- token را public نکن.
-- فایل‌های `/etc/iron/hub.json` و `/etc/iron/agent.json` را روی GitHub نگذار.
-- اگر امکانش را داری حتماً TLS strict را فعال کن و `hub.crt` را روی Agent قرار بده.
-- پورت control یعنی `9443` را با firewall فقط برای IP سرور Agent محدود کن.
-- اگر چند Agent می‌خواهی، برای هرکدام `agent_id` و token جداگانه بهتر است.
-
----
-
-## محدودیت‌ها
 
 - IRON فعلاً TCP را tunnel می‌کند، نه UDP.
 - این نسخه برای port forwarding امن ساخته شده، نه برای ناشناس‌سازی یا VPN کامل.
@@ -331,6 +288,3 @@ git push -u origin main
 
 ---
 
-## License
-
-MIT
