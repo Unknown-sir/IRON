@@ -1,0 +1,24 @@
+{
+  "agent_id": "default",
+  "token": "CHANGE_ME_USE_iron_token",
+  "control_host": "0.0.0.0",
+  "control_port": 9443,
+  "certfile": "/etc/iron/hub.crt",
+  "keyfile": "/etc/iron/hub.key",
+  "heartbeat_seconds": 10,
+  "heartbeat_timeout_seconds": 30,
+  "buffer_size": 65536,
+  "send_timeout_seconds": 15,
+  "local_drain_timeout_seconds": 20,
+  "stream_queue_size": 512,
+  "max_streams": 8192,
+  "listen_backlog": 4096,
+  "ports": [
+    {
+      "listen_host": "0.0.0.0",
+      "listen_port": 443,
+      "target_host": "127.0.0.1",
+      "target_port": 443
+    }
+  ]
+}
